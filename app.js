@@ -2,7 +2,7 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyrRlISUJrOg2QJni11mv0_1UaAuH-14jggG5pw_rN1_1z9N2ezYgi8XKEgz__I_A1n/exec";
 
 // ✅ LOGO OFICIAL
-const LOGO = "logo.png";
+const LOGO = "Logo.png";
 
 // ✅ Banco de preguntas y respuestas
 const FICHAS_BASE = [

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: 5 Momentos del Lavado de Manos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main id="app" class="contenedor-principal"></main>
+
+    <template id="tmp-inicio">
+        <img src="" alt="Logo" class="logo-inicio js-logo" />
+        <h1>5 Momentos Lavado de Manos</h1>
+        
+        <div class="control-entrada">
+            <input type="text" id="input-nombre" placeholder="Ingresa tu nombre" class="input-nombre" autocomplete="off" />
+            <button id="btn-iniciar" class="btn-azul">Iniciar Juego</button>
+        </div>
+
+        <h2>Ranking</h2>
+        <div id="lista-ranking" class="lista-ranking">
+            <p class="cargando">Cargando ranking...</p>
+        </div>
+    </template>
+
+    <template id="tmp-juego">
+        <img src="" alt="Logo" class="logo-juego js-logo" />
+        <div class="tarjeta">
+            <h2 id="ficha-encabezado"></h2>
+            <p id="ficha-texto"></p>
+        </div>
+        <div class="contenedor-botones">
+            <button data-respuesta="true" class="btn-respuesta btn-correcto">✅ Correcto</button>
+            <button data-respuesta="false" class="btn-respuesta btn-incorrecto">❌ Incorrecto</button>
+        </div>
+        <footer class="marcador">
+            <h3>Puntaje: <span id="puntaje-actual">0</span></h3>
+        </footer>
+    </template>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

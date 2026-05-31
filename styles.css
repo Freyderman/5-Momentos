@@ -1,0 +1,139 @@
+:root {
+    --azul: #1565A3;
+    --azul-dark: #0f4c7d;
+    --rojo: #E20D2E;
+    --rojo-dark: #b30a24;
+    --gris: #F4F4F4;
+    --blanco: #FFFFFF;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris);
+    color: #333;
+}
+
+.contenedor-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Imágenes de Logos */
+.logo-inicio { width: 130px; margin-bottom: 20px; }
+.logo-juego { width: 90px; margin-bottom: 10px; }
+
+h1 { color: var(--azul); margin-bottom: 25px; }
+
+/* Formularios y Botones */
+.control-entrada {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.input-nombre {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-nombre:focus {
+    border-color: var(--azul);
+}
+
+.btn-azul {
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-azul:hover { background-color: var(--azul-dark); }
+
+/* Ranking */
+.lista-ranking {
+    width: 100%;
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px var(--sombra);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.item-ranking {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-ranking:last-child { border-bottom: none; }
+
+/* Tarjeta de Juego */
+.tarjeta {
+    background: var(--blanco);
+    border-radius: 20px;
+    border: 3px solid var(--azul);
+    padding: 30px 20px;
+    width: 100%;
+    box-shadow: 0 6px 15px var(--sombra);
+    margin-bottom: 30px;
+    animation: eclosion 0.3s ease-out;
+}
+
+@keyframes eclosion {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.tarjeta h2 { margin-top: 0; color: var(--rojo); font-size: 22px; }
+.tarjeta p { font-size: 18px; line-height: 1.4; margin: 0; }
+
+.contenedor-botones {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn-respuesta {
+    flex: 1;
+    color: var(--blanco);
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.btn-respuesta:active { transform: scale(0.98); }
+.btn-correcto { background-color: var(--azul); }
+.btn-correcto:hover { background-color: var(--azul-dark); }
+.btn-incorrecto { background-color: var(--rojo); }
+.btn-incorrecto:hover { background-color: var(--rojo-dark); }
+
+.marcador { margin-top: 25px; }

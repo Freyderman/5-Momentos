@@ -34,7 +34,10 @@ body {
 .logo-inicio { width: 130px; margin-bottom: 20px; }
 .logo-juego { width: 90px; margin-bottom: 10px; }
 
-h1 { color: var(--azul); margin-bottom: 25px; }
+h1 { color: var(--azul); margin-bottom: 25px;
+   margin-bottom: 25px;
+    text-align: center; /* 👈 Agrega esto para centrar "5 Momentos Lavado de Manos" */
+    width: 100%;}
 
 /* Formularios y Botones */
 .control-entrada {
